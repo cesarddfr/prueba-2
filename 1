@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Protección</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function validarPassword() {
+            const password = document.getElementById('password').value;
+            if (password === 'admin123') {
+                document.getElementById('uploadSection').style.display = 'block';
+                alert('Contraseña correcta.');
+            } else {
+                alert('Contraseña incorrecta.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Página Web con Protección</h1>
+        <p>Por favor, ingrese la contraseña para cargar archivos:</p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="validarPassword()">Validar Contraseña</button>
+
+        <div id="uploadSection" style="display: none;">
+            <h2>Subir Archivo</h2>
+            <input type="file">
+            <button>Subir</button>
+        </div>
+
+        <hr>
+        <h3>Enlaces</h3>
+        <ul>
+            <li><a href="#">Enlace 1</a></li>
+            <li><a href="#">Enlace 2</a></li>
+            <li><a href="#">Enlace 3</a></li>
+        </ul>
+        
+        <h3>Apartados</h3>
+        <p>Aquí puedes añadir contenido como secciones, información o cualquier texto relevante.</p>
+    </div>
+</body>
+</html>
